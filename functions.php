@@ -4,7 +4,7 @@
 // and gives the update notice to the Theme installed in Wordpress.
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/wts-thomas/wts-wordpress-theme-onboarding/',
+	'https://github.com/wts-thomas/wts-elementor-onboarding/',
 	__FILE__,
 	'wts-elementor'
 );
