@@ -1,0 +1,278 @@
+/*
+Theme Name: WTS Elementor, Onboarding
+Theme URI: https://wtsks.com
+Author: WTS
+Author URI: https://wtsks.com
+Description: A plain-vanilla & lightweight theme for Elementor page builder
+Version: 0.1.0
+Requires at least: 5.2
+Tested up to: 6.1
+Requires PHP: 7.4
+JQuery: 3.6.1
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: Custom layout
+Text Domain: wts-elementor-onboarding
+*/
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+html {
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+a img, img a {
+	text-decoration: none; 
+	border: 0px;
+	border-style: none;
+}
+a[href^="tel"]{
+    color: inherit;
+    text-decoration: none;
+}
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+button:not(:disabled),
+[type="submit"]:not(:disabled),
+[type="button"]:not(:disabled) {
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+textarea {
+	outline: none;
+	overflow: auto;
+}
+
+/*	Full Height Div's and Containers 
+--------------------------------------------------------------- */
+
+body .fullScreen,
+body .full-screen,
+body .fullHeight,
+body .full-height {
+   height: 100%;
+   height: 100vh;
+   height: calc(var(--vh, 1vh) * 100);
+}
+
+/* ------------------------------------------------------------
+	FONTS
+/* ------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------
+	TYPESTYLES
+/* ------------------------------------------------------------ */
+
+.page-content p,
+.elementor-location-header p {
+   margin-block-start: 0em;
+   margin-block-end: 0em;
+}
+
+.page-content .elementor-element h1,
+.page-content .elementor-element h2,
+.page-content .elementor-element h3,
+.page-content .elementor-element h4,
+.page-content .elementor-element h5,
+.page-content .elementor-element h6 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/*	Text Leaders (similar to tabs in a text editor) 
+--------------------------------------------------------------- */
+
+ul.leaders {
+   max-width: 40em;
+   padding: 0;
+   overflow-x: hidden;
+   list-style: none;
+}
+ul.leaders li:before {
+   float: left;
+   width: 0;
+   white-space: nowrap;
+   content:
+   ". . . . . . . . . . . . . . . . . . . . "
+   ". . . . . . . . . . . . . . . . . . . . "
+   ". . . . . . . . . . . . . . . . . . . . "
+   ". . . . . . . . . . . . . . . . . . . . "
+}
+ul.leaders span:first-child {
+   padding-right: 0.33em;
+   background: white;
+}
+ul.leaders span + span {
+   float: right;
+   padding-left: 0.33em;
+   background: white;
+}
+
+/* ------------------------------------------------------------
+	BUTTONS - GLOBAL
+/* ------------------------------------------------------------ */
+
+
+#gform_submit_button_1 {
+    border: none;
+}
+
+.elementor-widget-button.btn-block {
+   width: 100%;
+}
+.elementor-widget-button.btn-block .elementor-button {
+   display: block !important;
+}
+
+
+/* ------------------------------------------------------------
+	CONTAINERS AND WRAPPERS
+/* ------------------------------------------------------------ */
+
+.elementor-widget-image-carousel .swiper-container .swiper-slide figure {
+   line-height: 0;
+}
+
+.dropShadow-50 {
+   filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+   -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+}
+.dropShadow-75 {
+   filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+   -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+}
+.dropShadow-85 {
+   filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.85));
+   -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.85));
+}
+
+/*	Horizontal Divider Line
+--------------------------------------------------------------- */
+
+.divider-shadow .elementor-divider {
+   padding-top: 10px !important;
+   padding-bottom: 10px !important;
+   background-color: transparent !important;
+}
+ .divider-shadow:after {
+   content: '';
+   position: absolute;
+   bottom: 8px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   -moz-border-radius: 100% / 18px;
+   -webkit-border-radius: 100% / 18px;
+   border-radius: 100% / 18px;
+   -webkit-box-shadow: 0 17px 18px rgba(0,0,0,0.75);
+   -moz-box-shadow: 0 17px 18px rgba(0,0,0,0.75);
+   box-shadow: 0 17px 18px rgba(0,0,0,0.75);
+   z-index: 10;
+ }
+
+/*	Tables 
+--------------------------------------------------------------- */
+
+.tablepress thead th,
+.tablepress tfoot th {
+	background-color: transparent !important;
+	text-transform: uppercase !important;
+   font-style: bold !important;
+}
+.tablepress .odd td {
+   background-color: rgba(0,0,0,0.05) !important;
+}
+.tablepress.table-responsive-stack.no-lines tr,
+.tablepress.table-responsive-stack.no-lines tbody td {
+	border: none !important;
+}
+.tablepress.table-responsive-stack.vertical-lines tbody td:not(:last-child) {
+	border-top: none;
+   border-right: solid 1px #ddd;
+}
+.tablepress.table-responsive-stack.vertical-lines tbody td:last-child {
+   border-top: none;
+}
+
+@media screen and (max-width: 960px) {
+    
+   .table-responsive-stack tr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+   }
+   .table-responsive-stack td,
+   .table-responsive-stack th {
+       display: block;
+       -ms-flex: 1 1 auto;
+       flex: 1 1 auto;
+   }
+   .table-responsive-stack-thead {
+       font-weight: bold;
+       text-transform: uppercase;
+   }
+   .table-responsive-stack tr {
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       display: block;
+   }
+  .table-responsive-stack td {
+      float: left;
+      width:100%;
+   }
+   .tablepress tbody tr:first-child td {
+      border-top: 1px solid #ddd !important;
+   }
+   .tablepress.table-responsive-stack.vertical-lines tbody tr:first-child td {
+      border-top: none !important;
+   }
+   .tablepress.table-responsive-stack.vertical-lines tbody td:not(:last-child) {
+      border-top: none;
+      border-right: none;
+   }
+   .tablepress .odd td,
+   .tablepress tr:nth-child(even) {
+		background-color: rgba(0,0,0,0.05) !important;
+	}
+  
+}
+
+/* ------------------------------------------------------------
+	TEMPLATES & PAGE(S)
+/* ------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------
+	LAZY LOAD
+/* ------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
