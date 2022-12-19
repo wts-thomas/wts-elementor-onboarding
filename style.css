@@ -49,6 +49,7 @@ button:not(:disabled),
 [type="submit"]:not(:disabled),
 [type="button"]:not(:disabled) {
 	cursor: pointer;
+   appearance: none;
 	-webkit-appearance: none;
 }
 textarea {

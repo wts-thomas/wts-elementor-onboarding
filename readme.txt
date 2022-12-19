@@ -21,6 +21,7 @@ Screenshot's images & icons are licensed under: Creative Commons (CC0), https://
 
 = 0.2.0 - 12-16-2022 =
 * Sidebar support and declarations for LifterLMS
+* Appearance default declaration for buttons and inputs
 
 = 0.1.0 - 12-16-2022 =
 * Initial Release
