@@ -269,6 +269,45 @@ return $v;
 }
 
 
+/*  SIDEBAR(S)
+________________________________________________________________________*/
+
+function themename_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Primary Sidebar', 'wts-elementor-onboarding' ),
+		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Secondary Sidebar', 'wts-elementor-onboarding' ),
+		'id'            => 'sidebar-2',
+		'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li></ul>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+}
+
+/*  Sidebar 1
+__________________________________________*/
+
+function my_llms_sidebar_function( $id ) {
+   $my_sidebar_id = 'sidebar-1'; // replace this with your theme's sidebar ID
+   return $my_sidebar_id;
+   }
+add_filter( 'llms_get_theme_default_sidebar', 'my_llms_sidebar_function' );
+
+/*  Declares support for Sidebar (sidebar-1)
+__________________________________________*/
+
+function my_llms_theme_support(){
+	add_theme_support( 'lifterlms-sidebars' );
+}
+add_action( 'after_setup_theme', 'my_llms_theme_support' );
+
 
 /*  PLUGIN EDITS
 ________________________________________________________________________*/
