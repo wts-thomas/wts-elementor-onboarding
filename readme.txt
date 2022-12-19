@@ -3,8 +3,8 @@
 Contributors: Thomas Rainer
 Requires at least: 4.7
 Tested up to: 6.1
-Stable tag: 0.2.0
-Version: 0.2.0
+Stable tag: 0.2.1
+Version: 0.2.1
 Requires PHP: 7.4
 JQuery: 3.6.1
 License: GNU General Public License v3 or later
@@ -19,7 +19,10 @@ This theme resets the WordPress environment and prepares it for smooth operation
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
-= 0.2.0 - 12-16-2022 =
+= 0.2.1 - 12-19-2022 =
+* Fixed readme 0.2.0 to correct upload date
+
+= 0.2.0 - 12-19-2022 =
 * Sidebar support and declarations for LifterLMS
 * Appearance default declaration for buttons and inputs
 
