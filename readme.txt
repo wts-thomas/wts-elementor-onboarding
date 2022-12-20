@@ -19,6 +19,9 @@ This theme resets the WordPress environment and prepares it for smooth operation
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
+= 0.3.0 - 12-20-2022 =
+* Adds FontAwesome 4.7 to the core theme
+
 = 0.2.1 - 12-19-2022 =
 * Fixed readme 0.2.0 to correct upload date
 

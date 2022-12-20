@@ -173,6 +173,7 @@ function add_theme_enqueues() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	wp_deregister_script('jquery');
 	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), '3.6.1', false);
+   wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome-min.css',false,'4.7','all');
 	wp_enqueue_script( 'viewportHeight', get_template_directory_uri() . '/js/viewportHeight.js#asyncload', array ( 'jquery' ), 1, true);
    wp_enqueue_script( 'responsiveTables', get_template_directory_uri() . '/js/responsiveTables.js#asyncload', array ( 'jquery' ), 1, true);
 }
