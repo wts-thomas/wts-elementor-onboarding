@@ -270,6 +270,34 @@ return $v;
 }
 
 
+/*  SHOW USER NAME IN NAVIGATION OR MESSAGE TO LOGIN
+________________________________________________________________________*/
+
+function give_profile_name(){
+   $user=wp_get_current_user();
+   if(!is_user_logged_in())
+       $name = "LOGIN";
+   else
+        $name=$user->user_firstname.' '.$user->user_lastname; 
+   return $name;
+}
+add_shortcode('profile_name', 'give_profile_name');
+
+add_filter( 'wp_nav_menu_objects', 'wts_dynamic_menu_items' );
+function wts_dynamic_menu_items( $menu_items ) {
+    foreach ( $menu_items as $menu_item ) {
+        if ( '#profile_name#' == $menu_item->title ) {
+            global $shortcode_tags;
+            if ( isset( $shortcode_tags['profile_name'] ) ) {
+                $menu_item->title = call_user_func( $shortcode_tags['profile_name'] );
+            }    
+        }
+    }
+
+    return $menu_items;
+}
+
+
 /*  SIDEBAR(S)
 ________________________________________________________________________*/
 
