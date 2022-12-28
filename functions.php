@@ -297,6 +297,14 @@ function wts_dynamic_menu_items( $menu_items ) {
     return $menu_items;
 }
 
+/*  REDIRECT TO HOME AFTER LOGGING OUT
+________________________________________________________________________*/
+
+add_action('wp_logout','go_home');
+   function go_home(){
+      wp_redirect( home_url() );
+   exit();
+}
 
 /*  SIDEBAR(S)
 ________________________________________________________________________*/
