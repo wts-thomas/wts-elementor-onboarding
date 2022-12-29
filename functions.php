@@ -377,6 +377,18 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
 // Hides top labels if Placeholders are added - dropdown option
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
+// Form validation for users - only alpha characters uppercase and lowercase with no spaces
+add_filter( 'gform_field_validation_17_6', 'custom_validation', 10, 4 );
+function custom_validation( $result, $value, $form, $field ) {
+
+
+	if ( ! empty( $value ) && ! preg_match('/^[a-zA-Z0-99]+$/', $value ) ) {
+		$result['is_valid'] = false;
+		$result['message'] = 'Please use only letters and numbers.';
+	}
+	return $result;
+}
+
 
 /*  LAZY LOAD
 ________________________________________________________________________*/

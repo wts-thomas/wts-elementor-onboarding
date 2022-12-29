@@ -3,7 +3,7 @@
 Contributors: Thomas Rainer
 Requires at least: 4.7
 Tested up to: 6.1
-Stable tag: 0.4.1
+Stable tag: 0.4.2
 Version: 0.2.1
 Requires PHP: 7.4
 JQuery: 3.6.1
@@ -18,6 +18,9 @@ A basic, plain-vanilla, lightweight theme, best suited for building your site us
 This theme resets the WordPress environment and prepares it for smooth operation of Elementor and LifterLMS.
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+= 0.4.2 - 12-29-2022 =
+* New user registration validation via Gravity Forms (letters and numbers only)
 
 = 0.4.1 - 12-28-2022 =
 * Redirects to Home after successfully logging out
