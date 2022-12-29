@@ -306,7 +306,6 @@ ________________________________________________________________________*/
 //    exit();
 // }
 function wts_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
-
    $user_roles = $user->roles;
    $user_has_admin_role = in_array( 'administrator', $user_roles );
 
@@ -391,16 +390,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
 // Hides top labels if Placeholders are added - dropdown option
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
-// Form validation for users - only alpha characters uppercase and lowercase with no spaces
-add_filter( 'gform_field_validation', 'custom_validation', 10, 4 );
-function custom_validation( $result, $value, $form, $field ) {
-
-	if ( ! empty( $value ) && ! preg_match('/^[a-zA-Z]+$/', $value ) ) {
-		$result['is_valid'] = false;
-		$result['message'] = 'Please use only uppercase and lowercase letters.';
-	}
-	return $result;
-}
+// Form validation for users - REMOVED
 
 // Redirects Wordpress default registration page
 add_action( 'login_form_register', 'wts_catch_register' );

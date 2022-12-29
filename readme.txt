@@ -3,8 +3,8 @@
 Contributors: Thomas Rainer
 Requires at least: 6.1
 Tested up to: 6.1
-Stable tag: 0.4.4
-Version: 0.4.4
+Stable tag: 0.4.5
+Version: 0.4.5
 Requires PHP: 8.1
 JQuery: 3.6.1
 License: GNU General Public License v3 or later
@@ -18,6 +18,9 @@ A basic, plain-vanilla, lightweight theme, best suited for building your site us
 This theme resets the WordPress environment and prepares it for smooth operation of Elementor and LifterLMS.
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+= 0.4.5 - 12-29-2022 =
+* Removed registration validation functions (using user email addresses)
 
 = 0.4.4 - 12-29-2022 =
 * Refactors logout page redirects
