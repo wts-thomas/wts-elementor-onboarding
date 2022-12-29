@@ -378,7 +378,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 // Form validation for users - only alpha characters uppercase and lowercase with no spaces
-add_filter( 'gform_field_validation_17_6', 'custom_validation', 10, 4 );
+add_filter( 'gform_field_validation', 'custom_validation', 10, 4 );
 function custom_validation( $result, $value, $form, $field ) {
 
 
@@ -387,6 +387,14 @@ function custom_validation( $result, $value, $form, $field ) {
 		$result['message'] = 'Please use only letters and numbers.';
 	}
 	return $result;
+}
+
+// Redirects Wordpress default registration page
+add_action( 'login_form_register', 'wts_catch_register' );
+function wts_catch_register()
+{
+    wp_redirect( home_url( '/blank.php' ) );
+    exit();
 }
 
 
