@@ -300,11 +300,25 @@ function wts_dynamic_menu_items( $menu_items ) {
 /*  REDIRECT TO HOME AFTER LOGGING OUT
 ________________________________________________________________________*/
 
-add_action('wp_logout','go_home');
-   function go_home(){
-      wp_redirect( home_url() );
-   exit();
-}
+// add_action('wp_logout','go_home');
+//    function go_home(){
+//       wp_redirect( home_url() );
+//    exit();
+// }
+function wts_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
+
+   $user_roles = $user->roles;
+   $user_has_admin_role = in_array( 'administrator', $user_roles );
+
+  if ( $user_has_admin_role ) :
+     $redirect_to = admin_url();
+  else:
+     $redirect_to = home_url();
+  endif;
+
+  return $redirect_to;
+}         
+add_filter( 'logout_redirect', 'wts_logout_redirect', 9999, 3 );
 
 /*  SIDEBAR(S)
 ________________________________________________________________________*/
@@ -381,10 +395,9 @@ add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 add_filter( 'gform_field_validation', 'custom_validation', 10, 4 );
 function custom_validation( $result, $value, $form, $field ) {
 
-
-	if ( ! empty( $value ) && ! preg_match('/^[a-zA-Z0-99]+$/', $value ) ) {
+	if ( ! empty( $value ) && ! preg_match('/^[a-zA-Z]+$/', $value ) ) {
 		$result['is_valid'] = false;
-		$result['message'] = 'Please use only letters and numbers.';
+		$result['message'] = 'Please use only uppercase and lowercase letters.';
 	}
 	return $result;
 }
