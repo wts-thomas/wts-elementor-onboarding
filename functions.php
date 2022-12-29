@@ -297,27 +297,20 @@ function wts_dynamic_menu_items( $menu_items ) {
     return $menu_items;
 }
 
-/*  REDIRECT TO HOME AFTER LOGGING OUT
+/*  REDIRECT AFTER LOGGING OUT
 ________________________________________________________________________*/
 
-// add_action('wp_logout','go_home');
-//    function go_home(){
-//       wp_redirect( home_url() );
-//    exit();
-// }
-function wts_logout_redirect( $redirect_to, $requested_redirect_to, $user ) {
-   $user_roles = $user->roles;
-   $user_has_admin_role = in_array( 'administrator', $user_roles );
-
-  if ( $user_has_admin_role ) :
-     $redirect_to = admin_url();
-  else:
-     $redirect_to = home_url();
-  endif;
-
-  return $redirect_to;
-}         
-add_filter( 'logout_redirect', 'wts_logout_redirect', 9999, 3 );
+//  Skips the Logout Warning Message & redirects user
+add_action('check_admin_referer', 'logout_without_confirm', 10, 2);
+function logout_without_confirm($action, $result)
+{
+    if ($action == "log-out" && !isset($_GET['_wpnonce'])) {
+        $redirect_to = isset($_REQUEST['redirect_to']) ? $_REQUEST['redirect_to'] : 'dashboard';
+        $location = str_replace('&amp;', '&', wp_logout_url($redirect_to));
+        header("Location: $location");
+        die;
+    }
+}
 
 /*  SIDEBAR(S)
 ________________________________________________________________________*/
