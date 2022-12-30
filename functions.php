@@ -393,12 +393,19 @@ function wts_catch_register()
     exit();
 }
 
-
-/*  LAZY LOAD
+/*  LIFTER LMS
 ________________________________________________________________________*/
 
+/*  Removes Dashboard Items
+__________________________________________*/
 
-
+function llms_remove_actions() {
+   remove_action( 'lifterlms_student_dashboard_index', 'lifterlms_template_student_dashboard_my_courses', 10 );
+   remove_action( 'lifterlms_student_dashboard_index', 'lifterlms_template_student_dashboard_my_achievements', 20 );
+   remove_action( 'lifterlms_student_dashboard_index', 'lifterlms_template_student_dashboard_my_certificates', 30 );
+   remove_action( 'lifterlms_student_dashboard_index', 'lifterlms_template_student_dashboard_my_memberships', 40 );
+}
+add_action( 'plugins_loaded', 'llms_remove_actions', 999 );
 
 
 /* THIS IS THE END                                                       */

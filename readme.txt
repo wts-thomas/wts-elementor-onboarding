@@ -3,8 +3,8 @@
 Contributors: Thomas Rainer
 Requires at least: 6.1
 Tested up to: 6.1
-Stable tag: 0.5.0
-Version: 0.5.0
+Stable tag: 0.6.0
+Version: 0.6.0
 Requires PHP: 8.1
 JQuery: 3.6.1
 License: GNU General Public License v3 or later
@@ -18,6 +18,10 @@ A basic, plain-vanilla, lightweight theme, best suited for building your site us
 This theme resets the WordPress environment and prepares it for smooth operation of Elementor and LifterLMS.
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+= 0.6.0 - 12-30-2022 =
+* Function to remove items from the Student/User Dashboard
+* Styles for the Company Dashboard
 
 = 0.5.0 - 12-29-2022 =
 * Refactored logout function to ignore confirmation warning (redirects user to Dashboard)

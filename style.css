@@ -4,7 +4,7 @@ Theme URI: https://wtsks.com
 Author: WTS
 Author URI: https://wtsks.com
 Description: A plain-vanilla & lightweight theme for Elementor page builder
-Version: 0.5.0
+Version: 0.6.0
 Requires at least: 6.1
 Tested up to: 6.1
 Requires PHP: 8.1
@@ -267,9 +267,72 @@ ul.leaders span + span {
 }
 
 /* ------------------------------------------------------------
-	TEMPLATES & PAGE(S)
+	LIFTER LMS
 /* ------------------------------------------------------------ */
 
+body.llms_group-template-default #container {
+   width: 80%;
+   max-width: 1200px;
+   position: relative;
+   margin: 180px auto;
+}
+body.llms_group-template-default .llms-group-content .llms-field-select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   padding: 1em;
+   border: solid 1px #ccc;
+   border-radius: 0em;
+   margin: 0.5em 0 1em 0 !important;
+   font-size: 13px;
+}
+body.llms_group-template-default .llms-group-content .llms-field-input {
+   padding: 1em;
+   font-size: 13px;
+   border: solid 1px #ccc;
+   margin: 0.5em 0 0.5em 0 !important;
+}
+body.llms_group-template-default .llms-field-input .tagify__input {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+body.llms_group-template-default .llms-group-profile-nav ul.llms-group-menu li.llms-group-menu-item a.llms-group-menu-link {
+   text-decoration: none;
+   font-weight: bold;
+}
+body.llms_group-template-default .llms-group-content h3.llms-group-card-title {
+   text-transform: uppercase;
+   font-size: 20px;
+   font-weight: bold;
+}
+body.llms_group-template-default .llms-group-card-footer .llms-group-card-title .fa, .llms-group-card-header .llms-group-card-title .fa {
+   color: #999;
+   margin-right: 0.5em;
+}
+body.llms_group-template-default.llms-group-card-main .llms-group-card-main--heading {
+   font-size: 25px;
+}
+body.llms_group-template-default .llms-group-button {
+   padding: 1em 2em;
+}
+body.llms_group-template-default .llms-group-context-menu button.llms-group-member-action:hover {
+   background-color: #000;
+   color: #fff;
+}
+body.llms_group-template-default .llms-group-context-menu li button {
+   font-size: 13px;
+}
+body.llms_group-template-default .llms-group-card-header {
+   padding: 1em;
+}
+body.llms_group-template-default .llms-group-seats-modal .llms-form-fields.flush .llms-form-field input {
+   font-size: 20px;
+   padding: 0.5em;
+}
+body.llms_group-template-default .llms-group-card-footer {
+   padding: 1em;
+}
 
 
 
