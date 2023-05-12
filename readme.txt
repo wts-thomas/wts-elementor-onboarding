@@ -3,9 +3,9 @@
 Contributors: Thomas Rainer
 Requires at least: 6.1
 Tested up to: 6.1
-Stable tag: 0.6.0
-Version: 0.6.0
-Requires PHP: 8.1
+Stable tag: 0.7.0
+Version: 0.7.0
+Requires PHP: 8.0
 JQuery: 3.6.1
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -18,6 +18,10 @@ A basic, plain-vanilla, lightweight theme, best suited for building your site us
 This theme resets the WordPress environment and prepares it for smooth operation of Elementor and LifterLMS.
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+= 0.7.0 - 01-03-2023 =
+* Breadcrumb shortcode (page-breadcrumb) with basic css
+* NOTE: the breadcrumb shortcode will be replaced with a custom Breadcrumb Elementor Widget
 
 = 0.6.0 - 12-30-2022 =
 * Function to remove items from the Student/User Dashboard
