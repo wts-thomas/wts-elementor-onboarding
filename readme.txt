@@ -3,8 +3,8 @@
 Contributors: Thomas Rainer
 Requires at least: 6.1
 Tested up to: 6.1
-Stable tag: 0.7.0
-Version: 0.7.0
+Stable tag: 1.0.0
+Version: 1.0.0
 Requires PHP: 8.0
 JQuery: 3.6.1
 License: GNU General Public License v3 or later
@@ -18,6 +18,11 @@ A basic, plain-vanilla, lightweight theme, best suited for building your site us
 This theme resets the WordPress environment and prepares it for smooth operation of Elementor and LifterLMS.
 
 Screenshot's images & icons are licensed under: Creative Commons (CC0), https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+= 1.0.0 - 05-11-2023 =
+* Admin styles added to mitigate annoying Yoast upselling
+* Dark style overrides for Elementor's default UI colors
+* Marked as 1.0 since this theme has been used for a live site without issues
 
 = 0.7.0 - 01-03-2023 =
 * Breadcrumb shortcode (page-breadcrumb) with basic css

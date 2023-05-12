@@ -1,0 +1,8 @@
+/*	YoastSEO Layout Adjustments 
+--------------------------------------------------------------- */
+
+.wpseo-admin-page #webinar-promo-notification,
+.wpseo-admin-page .wpseo_content_wrapper #sidebar-container,
+.wpseo_content_cell .yoast_premium_upsell {
+	display: none !important;
+}

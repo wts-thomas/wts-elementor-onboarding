@@ -12,6 +12,11 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 //Set the branch that contains the stable release.
 $myUpdateChecker->setBranch('main');
 
+// Custom Admin Styles
+function my_admin_head() {
+   echo '<link href="'.get_stylesheet_directory_uri().'/wp-admin.css" rel="stylesheet" type="text/css">';
+}
+add_action('admin_head', 'my_admin_head');
 
 /*  Performance & Security Edits
 _____________________________________________________________________*/
@@ -102,10 +107,15 @@ function eos_dequeue_gutenberg() {
 }
 add_action( 'wp_print_styles', 'eos_dequeue_gutenberg' );
 
-
 // Add theme support for Featured Images
 add_theme_support( 'post-thumbnails' );
 
+// OVERRIDE DARK MODE EDITOR STYLES - SINCE 3.12.0
+function override_elementor_styles_css(){ 
+   wp_register_style('override-editor-styles', get_template_directory_uri().'/styles/editor-darkmode-overrides.css');
+   wp_enqueue_style('override-editor-styles');
+} 
+add_action( 'elementor/editor/after_enqueue_scripts', 'override_elementor_styles_css', 9999999 );
 
 /*  ADMIN DASHBOARD LINKS
 ________________________________________________________________________*/
